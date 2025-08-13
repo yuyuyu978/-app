@@ -26,7 +26,7 @@ function appendMessage(role, text){
 async function sendToAI(userText){
     conversation.push({role:'user', content:userText});
     try {
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        const response = await fetch('https://secretary-api.vercel.app/', {
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
